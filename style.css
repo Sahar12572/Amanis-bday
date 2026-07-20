@@ -1,0 +1,1243 @@
+/* ===================================================
+   HAPPY BIRTHDAY AMANI
+   STYLE.CSS
+   PART 1 - GLOBAL STYLES
+=================================================== */
+
+/* ================= GOOGLE FONTS ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap');
+
+/* ================= ROOT ================= */
+
+:root{
+
+    --background:#050505;
+    --card:#111111;
+
+    --emerald:#0F6D58;
+    --emerald-light:#21B58D;
+
+    --blue:#12254D;
+    --pink:#FF8BD5;
+
+    --gold:#E6C56B;
+
+    --white:#F8F8F8;
+    --grey:#BDBDBD;
+
+    --shadow:0 0 35px rgba(33,181,141,.35);
+
+}
+
+/* ================= RESET ================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--background);
+    color:var(--white);
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#070707;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(var(--emerald),var(--pink));
+    border-radius:30px;
+
+}
+
+/* ================= BACKGROUND ================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top,
+    rgba(70,120,255,.15),
+    transparent 45%),
+
+    radial-gradient(circle at bottom,
+    rgba(255,90,180,.12),
+    transparent 45%),
+
+    radial-gradient(circle at center,
+    rgba(0,180,150,.08),
+    transparent 55%);
+
+    z-index:-3;
+
+}
+
+/* ================= STARS ================= */
+
+.stars{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-2;
+
+}
+
+.star{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    border-radius:50%;
+
+    animation:twinkle 4s infinite ease-in-out;
+
+}
+
+/* ================= FLOATING LIGHTS ================= */
+
+.light{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:rgba(33,181,141,.6);
+
+    filter:blur(2px);
+
+    animation:float 14s linear infinite;
+
+}
+
+/* ================= GLOBAL SECTIONS ================= */
+
+section{
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    padding:80px 10%;
+
+}
+
+/* ===================================================
+   INTRO
+=================================================== */
+
+.intro{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:#050505;
+
+    z-index:9999;
+
+}
+
+.intro-content{
+
+    animation:fadeUp 2s;
+
+    max-width:850px;
+
+}
+
+.main-title{
+
+    font-family:"Cinzel",serif;
+
+    font-size:5rem;
+
+    color:white;
+
+    letter-spacing:8px;
+
+    text-shadow:
+
+    0 0 15px #7EC8FF,
+
+    0 0 35px #FF8BD5,
+
+    0 0 55px #7EC8FF;
+
+}
+
+.name{
+
+    margin-top:18px;
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:3rem;
+
+    color:#FFB7E8;
+
+}
+
+.intro-line{
+
+    margin-top:35px;
+
+    font-size:1.15rem;
+
+    color:#D8D8D8;
+
+    opacity:0;
+
+    line-height:1.8;
+
+}
+
+.second{
+
+    margin-top:15px;
+
+}
+
+/* ===================================================
+   BUTTONS
+=================================================== */
+
+.begin-btn{
+
+    margin-top:60px;
+
+    padding:18px 55px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    color:white;
+
+    background:linear-gradient(
+    135deg,
+    var(--emerald),
+    var(--blue),
+    var(--pink));
+
+    transition:.4s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.begin-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 0 25px rgba(126,200,255,.45),
+
+    0 0 45px rgba(255,139,213,.35);
+
+}
+
+/* ===================================================
+   HEADINGS
+=================================================== */
+
+.title{
+
+    font-family:"Cinzel";
+
+    font-size:3rem;
+
+    color:white;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    text-shadow:
+
+    0 0 10px #7EC8FF,
+
+    0 0 25px #FF8BD5;
+
+}
+
+.subtitle{
+
+    color:var(--grey);
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+    line-height:1.8;
+
+}
+
+/* ===================================================
+   GLASS EFFECT
+=================================================== */
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    box-shadow:0 0 40px rgba(0,0,0,.45);
+
+}
+
+/* ===================================================
+   ANIMATIONS
+=================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes float{
+
+    from{
+
+        transform:translateY(100vh);
+
+    }
+
+    to{
+
+        transform:translateY(-120px);
+
+    }
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.2;
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+        transform:scale(1.8);
+
+    }
+
+    100%{
+
+        opacity:.2;
+        transform:scale(.8);
+
+    }
+
+}
+
+@keyframes glow{
+
+    0%{
+
+        text-shadow:0 0 8px rgba(126,200,255,.25);
+
+    }
+
+    50%{
+
+        text-shadow:
+
+        0 0 18px #7EC8FF,
+
+        0 0 30px #FF8BD5;
+
+    }
+
+    100%{
+
+        text-shadow:0 0 8px rgba(126,200,255,.25);
+
+    }
+
+}
+/* ===================================================
+   PART 2 - SLIDESHOW • VIDEOS • MEMORIES
+=================================================== */
+
+/* ================= SLIDESHOW ================= */
+
+.slideshow{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+/* ================= SLIDES ================= */
+
+.slide{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transform:scale(1.03);
+
+    transition:
+
+        opacity 1.5s ease,
+
+        transform 8s ease;
+
+    padding:40px;
+
+}
+
+.slide.active{
+
+    opacity:1;
+
+    transform:scale(1);
+
+    z-index:2;
+
+}
+
+/* ================= PHOTO FRAME ================= */
+
+.photo-frame{
+
+    width:min(850px,90vw);
+
+    padding:18px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 0 30px rgba(126,200,255,.15),
+
+        0 0 60px rgba(0,0,0,.45);
+
+}
+
+.photo-frame img{
+
+    width:100%;
+
+    height:clamp(350px,60vh,620px);
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    display:block;
+
+    animation:cinematicZoom 10s ease-in-out infinite alternate;
+
+}
+
+/* ================= CAPTION ================= */
+
+.caption{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    max-width:800px;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.caption h3{
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:2.6rem;
+
+    color:white;
+
+    text-shadow:
+
+        0 0 12px #7EC8FF,
+
+        0 0 25px #FF8BD5;
+
+    margin-bottom:15px;
+
+}
+
+.caption p{
+
+    color:var(--grey);
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+/* ================= PROGRESS BAR ================= */
+
+.slide-progress{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(700px,85vw);
+
+    height:5px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.slide-progress span{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #7EC8FF,
+
+        #FF8BD5,
+
+        var(--emerald-light)
+
+    );
+
+    animation:progressFill 8s linear;
+
+}
+
+/* ================= VIDEO ================= */
+
+.video-card{
+
+    width:min(900px,92vw);
+
+    padding:18px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 0 30px rgba(126,200,255,.15),
+
+        0 0 60px rgba(0,0,0,.5);
+
+}
+
+.video-card video{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    background:black;
+
+}
+
+.video-caption{
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+.video-caption h3{
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:2.3rem;
+
+    color:white;
+
+    text-shadow:
+
+        0 0 12px #7EC8FF,
+
+        0 0 25px #FF8BD5;
+
+    margin-bottom:10px;
+
+}
+
+.video-caption p{
+
+    color:var(--grey);
+
+    line-height:1.8;
+
+}
+
+/* ================= SECTION SPACING ================= */
+
+.space{
+
+    height:140px;
+
+}
+
+/* ================= FADE ANIMATION ================= */
+
+.fade-in{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:1s ease;
+
+}
+
+.fade-in.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes cinematicZoom{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+@keyframes progressFill{
+
+    from{
+
+        width:0%;
+
+    }
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+/* ===================================================
+   PART 3 - LETTER • MEMORY WALL • FINAL SCREEN
+=================================================== */
+
+/* ================= LETTER ================= */
+
+.letter-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:120px 10%;
+
+}
+
+.letter-card{
+
+    width:min(900px,100%);
+
+    padding:70px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 0 40px rgba(0,0,0,.45);
+
+}
+
+.letter-card h2{
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:3.5rem;
+
+    color:white;
+
+    margin-bottom:35px;
+
+    text-shadow:
+
+        0 0 12px #7EC8FF,
+
+        0 0 30px #FF8BD5;
+
+}
+
+.letter-card p{
+
+    color:var(--grey);
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+    margin-bottom:22px;
+
+}
+
+.signature{
+
+    margin-top:40px;
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:2rem;
+
+    color:white;
+
+}
+
+/* ================= TYPEWRITER ================= */
+
+.typewriter{
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    border-right:3px solid #7EC8FF;
+
+    animation:
+
+        typing 4s steps(30,end),
+
+        blink .8s infinite;
+
+}
+
+@keyframes typing{
+
+    from{
+
+        width:0;
+
+    }
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        border-color:transparent;
+
+    }
+
+}
+
+/* ================= SURPRISE BUTTON ================= */
+
+.surprise-btn{
+
+    margin-top:50px;
+
+    padding:18px 55px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:1rem;
+
+    background:linear-gradient(
+        135deg,
+        var(--blue),
+        var(--emerald),
+        var(--pink)
+    );
+
+    transition:.4s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.surprise-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 0 25px #7EC8FF,
+
+        0 0 45px #FF8BD5;
+
+}
+
+/* ===================================================
+   MEMORY WALL
+=================================================== */
+
+.memory-wall{
+
+    min-height:100vh;
+
+    position:relative;
+
+    background:#050505;
+
+    overflow:hidden;
+
+    padding:25px;
+
+}
+
+#memoryGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+
+    gap:12px;
+
+}
+
+.memory{
+
+    opacity:0;
+
+    transform:scale(.8);
+
+    transition:.7s ease;
+
+}
+
+.memory.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+.memory img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    box-shadow:
+
+        0 0 20px rgba(126,200,255,.15),
+
+        0 0 30px rgba(255,139,213,.12);
+
+}
+
+/* ===================================================
+   FINAL SCREEN
+=================================================== */
+
+.final-screen{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:80px 10%;
+
+}
+
+.final-screen h1{
+
+    font-family:"Cinzel";
+
+    font-size:4.8rem;
+
+    color:white;
+
+    text-shadow:
+
+        0 0 18px #7EC8FF,
+
+        0 0 40px #FF8BD5;
+
+    margin-bottom:20px;
+
+}
+
+.final-screen h2{
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:3rem;
+
+    color:#FFD3EE;
+
+    margin-bottom:30px;
+
+}
+
+.final-screen p{
+
+    max-width:700px;
+
+    color:var(--grey);
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+}
+
+/* ===================================================
+   MUSIC PLAYER
+=================================================== */
+
+.music-player{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:14px 22px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    z-index:999;
+
+}
+
+.music-player button{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:1.2rem;
+
+    transition:.3s;
+
+}
+
+.music-player button:hover{
+
+    color:#7EC8FF;
+
+    transform:scale(1.15);
+
+}
+
+.music-player span{
+
+    color:var(--grey);
+
+    font-size:.95rem;
+
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media(max-width:768px){
+
+    .main-title{
+
+        font-size:3rem;
+
+    }
+
+    .name{
+
+        font-size:2rem;
+
+    }
+
+    .title{
+
+        font-size:2.2rem;
+
+    }
+
+    .letter-card{
+
+        padding:35px;
+
+    }
+
+    .letter-card h2{
+
+        font-size:2.7rem;
+
+    }
+
+    .final-screen h1{
+
+        font-size:3rem;
+
+    }
+
+    .final-screen h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .music-player{
+
+        left:15px;
+
+        right:15px;
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .main-title{
+
+        font-size:2.4rem;
+
+        letter-spacing:3px;
+
+    }
+
+    .name{
+
+        font-size:1.7rem;
+
+    }
+
+    .intro-line{
+
+        font-size:1rem;
+
+    }
+
+    .letter-card{
+
+        padding:25px;
+
+    }
+
+    .letter-card h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .letter-card p{
+
+        font-size:.95rem;
+
+    }
+
+    .final-screen h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .final-screen h2{
+
+        font-size:1.9rem;
+
+    }
+
+}
